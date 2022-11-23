@@ -1,0 +1,37 @@
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-xs-10 mt-5">
+      <app-edit-shopping-list
+        (newItemAdded)="storeIngredient($event)"
+       [ingredient]="selectedItem"
+       (selectedItemEvent)="deleteItem()"
+       (clearElements)="clearElements()"
+
+      ></app-edit-shopping-list>
+      <hr />
+      <ul class="list-group bg-white">
+        <!-- <a
+        class="list-group-item fs-5 p-3"
+        style="cursor: pointer"
+        *ngFor="let ingredient of ingredients"
+      >
+        {{ ingredient.item }} ({{ ingredient.amount }})
+
+      </a> -->
+        <mat-selection-list #shoes [multiple]="false">
+          <mat-list-option
+            *ngFor="let ingredient of ingredients; let i = index"
+            (click)="selected(i)"
+          >
+            <div class="row">
+              <div class="col-md-6">{{ ingredient.item }}</div>
+              <div class="col-md-6 text-end">
+                &#8377; {{ ingredient.amount }}
+              </div>
+            </div>
+          </mat-list-option>
+        </mat-selection-list>
+      </ul>
+    </div>
+  </div>
+</div>

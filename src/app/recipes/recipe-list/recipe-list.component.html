@@ -1,0 +1,34 @@
+<div class="container">
+  <!-- <div *ngFor="let item of recipe" class="shadow mt-5 item border">
+  <div class="row">
+    <div class="col-lg-7">
+      <div class="text-center fs-1 mb-4"><b>{{ item.name }}</b></div>
+      <div class="fs-5">{{ item.description }}</div>
+
+      <div class="fs-3 mt-4 mb-1"><b> Price :Rs.{{item.price}}</b></div>
+    </div>
+
+    <div class="col-lg-5 ">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{{ item.imagePath }}" alt="images" class="img-responsive" height="300" width="330">
+          </div>
+          <div class="flip-card-back pt-5">
+            <h1 class="mt-5">{{ item.name }}</h1>
+            <p>Rating :{{item.rating}} Stars</p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div> -->
+
+  <app-recipe-item
+    *ngFor="let item of recipe"
+    [item]="item"
+    (recipeSelected)="onRecipeSelected(item)"
+  ></app-recipe-item>
+</div>

@@ -1,0 +1,36 @@
+<div class="shadow mt-5 item border list-group-item" (click)="onSelected()" style="cursor: pointer;">
+  <div class="row">
+    <div class="col-xl-7">
+      <div class="text-center fs-1 mb-5 mt-5">
+        <b>{{ item.name }}</b>
+      </div>
+      <div class="description mt-5">{{ item.description }}</div>
+
+      <div class="fs-3 mt-5 mb-4">
+        <b> Price :Rs.{{ item.price }}</b>
+      </div>
+    </div>
+
+    <div class="col-xl-5">
+      <div class="flip-card text-center">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="{{ item.imagePath }}"
+              alt="images"
+              class="img-responsive "
+              height="300"
+              width="300"
+            />
+          </div>
+          <div class="flip-card-back pt-5">
+            <div class="mt-5 pt-auto">
+            <h1 class="mt-5 pt-1">{{ item.name }}</h1>
+            <p>Rating :{{ item.rating }} Stars</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="container">
+
+
+
+      <div class="row mt-5 mb-3">
+        <div class="col-lg-5 form-group bg-white rounded-2 me-5 mb-2">
+          <!-- <label for="name">Name</label>
+          <input type="text" id="name" class="form-control"> -->
+          <mat-form-field class="example-form-field fs-6" >
+            <mat-label>Item Name</mat-label>
+            <input matInput type="text" [(ngModel)]="name" required="required">
+          </mat-form-field>
+        </div>
+
+        <div class="col-lg-2 form-group bg-white rounded-2 mb-2">
+          <!-- <label for="amount">Amount</label>
+          <input type="number" id="amount" class="form-control"> -->
+          <mat-form-field class="example-form-field  fs-6" >
+            <mat-label>Item Amount</mat-label>
+            <input matInput type="number" [(ngModel)]="amount" required="required">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- <button class="btn btn-success" type="submit">Add</button> -->
+          <button mat-raised-button color="primary" class="me-2" (click)="onAddItem()">Add Item</button>
+          <!-- <button class="btn btn-danger" type="button">Delete</button> -->
+          <button mat-raised-button color="warn" class="m-2" (click)="onDeleteItem()" [disabled]="isDisabled">Delete</button>
+          <button mat-raised-button color="" class="m-2"(click)="onClear()" >Clear</button>
+
+          <!-- <button class="btn btn-primary" type="button">Clear</button> -->
+        </div>
+      </div>
+
+
+
+</div>
