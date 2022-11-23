@@ -1,0 +1,35 @@
+
+
+<!-- <div *ngFor="let item of data.results">
+<img src="https://www.themoviedb.org/t/p/w220_and_h330_face/{{item.poster_path}}" alt="">
+</div> -->
+<ng-content #name></ng-content>
+
+<owl-carousel-o [options]="customOptions">
+
+  <ng-container *ngFor="let slide of MovieData.results">
+    <ng-template carouselSlide>
+      <!-- <img [src]="'https://www.themoviedb.org/t/p/w220_and_h330_face/'+slide.poster_path" [alt]="slide.title" [title]="slide.title"> -->
+      <div class="card bg-dark text-white">
+        <img [src]="'https://www.themoviedb.org/t/p/w220_and_h330_face/'+slide.poster_path" [alt]="slide.title" [title]="slide.title" class="card-img" alt="...">
+        <div class="card-img-overlay back" >
+          <strong class="card-title">{{slide.title}}</strong>
+          <p class="card-text overflow-hidden overview">{{slide.overview}}</p>
+          <!-- <p class="card-text">{{slide.release_date}}</p> -->
+        </div>
+      </div>
+    </ng-template>
+  </ng-container>
+
+</owl-carousel-o>
+<!-- <ng-container *ngFor="let slide of MovieData.results">
+  {{slide.poster}}
+</ng-container> -->
+<!-- <div class="card bg-dark text-white">
+  <img [src]="'https://www.themoviedb.org/t/p/w220_and_h330_face/'+slide.poster_path" [alt]="slide.title" [title]="slide.title" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title">{{slide.title}}</h5>
+    <p class="card-text">{{slide.overview}}</p>
+    <p class="card-text">{{slide.release_date}}</p>
+  </div>
+</div> -->

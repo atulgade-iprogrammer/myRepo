@@ -1,0 +1,34 @@
+<div class="background">
+  <app-header></app-header>
+  <app-corousel></app-corousel>
+  <app-poster-corousel [MovieData]="trending" *ngIf="isVisible1;">
+    <div class="headerTag mb-2">Trending & Latest</div>
+  </app-poster-corousel>
+
+  <app-poster-corousel [MovieData]="topRated" *ngIf="isVisible2;">
+    <div class="headerTag mb-2">Top Rated</div>
+  </app-poster-corousel>
+
+  <app-poster-corousel [MovieData]="popular" *ngIf="isVisible2;">
+    <div class="headerTag mb-2">Popular</div>
+  </app-poster-corousel>
+
+    <div class="container-fluid text-center" *ngIf="!isVisible1 || !isVisible2 || !isVisible3" >
+      <div class="spinner-grow text-white text-center mx-1 my-5" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-white text-center mx-1 my-5" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-white text-center mx-1 my-5" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-white text-center mx-1 my-5" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-white text-center mx-1 my-5" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+</div>

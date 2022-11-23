@@ -1,0 +1,24 @@
+/* .background {
+  background: #070708;
+  background: -webkit-linear-gradient(71deg, #070708 0%, #5a5d65 100%);
+  background: linear-gradient(71deg, #070708 0%, #5a5d65 100%);
+} */
+.headerTag {
+  color: white;
+  font-size: 20px;
+  font-family: "Lobster", cursive;
+  padding: 10px;
+}
+.progress {
+  width: 100.8px;
+  height: 16.8px;
+  -webkit-mask: radial-gradient(circle closest-side,#ffffff 94%,#0000) left/20% 100%;
+  background: linear-gradient(#ffffff 0 0) left/0% 100% no-repeat #9e9fa6;
+  animation: progress-c3ir73 2s infinite steps(6);
+}
+
+@keyframes progress-c3ir73 {
+  100% {
+     background-size: 120% 100%;
+  }
+}
